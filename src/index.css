@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Modern SaaS Monochromatic Palette */
+  --bg: #F7F7F8;
+  --surface: #FFFFFF;
+  --surface-hover: #F3F4F6;
+  --border: #E5E7EB;
+  --border-strong: #D1D5DB;
+  
+  --foreground: #030712;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  
+  --accent: #000000;
+  --accent-light: #374151;
+  --success: #059669;
+  --success-bg: #D1FAE5;
+  --danger: #DC2626;
+  --danger-bg: #FEE2E2;
+
+  --sidebar-bg: #030712;
+  --sidebar-surface: #111827;
+  --sidebar-border: #1F2937;
+  --sidebar-text: #D1D5DB;
+  --sidebar-muted: #6B7280;
+
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+::selection { background: rgba(0, 0, 0, 0.1); }
+
+button { cursor: pointer; border: none; background: none; font-family: var(--font-body); color: inherit; transition: all 0.2s ease; }
+input, textarea { font-family: var(--font-body); color: inherit; }
+
+/* Refined Markdown Styling */
+.markdown { font-size: 14px; line-height: 1.7; color: var(--text-primary); }
+.markdown strong { font-weight: 600; color: var(--foreground); }
+.markdown em { font-style: italic; }
+.markdown code { 
+  font-family: var(--font-mono); 
+  background: var(--surface-hover); 
+  border: 1px solid var(--border); 
+  padding: 0.15em 0.4em; 
+  border-radius: 4px; 
+  font-size: 0.85em; 
+}
+.markdown ul { padding-left: 1.5rem; margin: 0.75rem 0; list-style-type: disc; }
+.markdown li { margin-bottom: 0.4rem; color: var(--text-secondary); }
+.markdown p { margin-bottom: 0.8rem; }
+
+@keyframes fadeSlideUp { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.fade-in { animation: fadeSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
