@@ -1,4 +1,4 @@
-const BASE = '/api'
+const BASE = 'https://docmind-backend-s3tu.onrender.com'
 
 async function parseError(res) {
   try {
